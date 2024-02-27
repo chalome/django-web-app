@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from listings.models import Band
 # Create your views here.
@@ -20,3 +20,6 @@ def hello(request):
 def about(request):
     
     return render(request,'listings/about.html')
+
+
+    

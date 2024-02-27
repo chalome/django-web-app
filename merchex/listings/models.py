@@ -15,6 +15,7 @@ class Band(models.Model):
     )
     active = models.fields.BooleanField(default=True)
     official_homepage = models.fields.URLField(null=True, blank=True)
+ 
     def __str__(self):
             return self.name
 class Listings(models.Model):
@@ -34,3 +35,7 @@ class Listings(models.Model):
     )
     type=models.fields.CharField(choices=ListingType.choices, max_length=5)
     band = models.ForeignKey(Band, null=True, on_delete=models.SET_NULL)
+    
+    class Meta:
+        ordering=('title',)
+        verbose_name_plural='Listings'

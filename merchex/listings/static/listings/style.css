@@ -1,5 +1,5 @@
-body{
-   background-color: gray;
-   align-items: center;
-   justify-content: center;
+*{
+   margin: 0;
+   padding: 0;
+
 }
